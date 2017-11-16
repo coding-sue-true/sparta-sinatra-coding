@@ -1,4 +1,5 @@
 # sparta-sinatra-mvc
+#### Completed Tasks - 9/9
 
 *New Resource Homework*
 
@@ -18,3 +19,12 @@ Your site will need to have the following:-
 *Deliverables*
 
 Our aim is to delivery working code. Work on little sections of functionality and only commit when something is working. This means you have always got something that is working in your last commit. You might not complete all the points above but what you do delivery will be working.
+
+### Most Difficult
+* Link the pages
+* Understand RESTful
+* New back end logic
+* Insert Content into divs using the layout
+
+### Most Pleased with
+* Final Result, although it's not very pretty
