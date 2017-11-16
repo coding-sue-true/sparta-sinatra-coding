@@ -1,6 +1,6 @@
-<h1>Welcome to my coding website</h1>
-<% @coding.each do |code| %>
+<h1>Sources</h1>
+<% @coding.each do |coder| %>
   <div>
-    <h3><a href="/sources/<%= code[:id]%>"><%= code[:title] %></a></h3>
+    <h3><a href="/coding/<%= coder[:id]%>"><%= coder[:title] %></a></h3>
   </div>
 <% end %>

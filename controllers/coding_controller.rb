@@ -25,21 +25,49 @@ class CodingController < Sinatra::Base
   }];
 
   get "/" do
-    @title = "Coding Webpage"
+    @title = "Coding_True"
     @coding = $code
 
+    erb :'coding/home'
+  end
+
+  get "/coding" do
+    @title = "Coding_True"
+    @coding = $code
     erb :'coding/index'
   end
 
-  get "/sources" do
-    @title = "Sources"
-    @coding = $code
-
-    erb :'coding/sources'
+  get "/coding/new" do
+    @title = "Coding_True"
+    erb :'coding/new'
   end
 
-  get "/sources/examples" do
-    @title = "Examples"
-    erb :'coding/examples'
+  get "/coding/:id" do
+    id = params[:id].to_i
+    @coding = $code
+    @title = "Coding_True"
+    erb :'coding/show'
+  end
+
+  get "/coding/:id/edit" do
+    @title = "Coding_True"
+    id = params[:id]
+    erb :'coding/edit'
+  end
+
+  post "/coding/" do
+    "New programming language"
+  end
+
+  put "/coding/:id" do
+    id = params[:id]
+
+    "Update: #{id}"
+  end
+
+  delete "/coding/:id" do
+    id = params[:id]
+
+    "Delete: #{id}"
   end
 end

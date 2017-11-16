@@ -11,3 +11,16 @@ nav {
 nav a {
   padding-right: 25px;
 }
+
+/*.main {
+  width: 500px;
+  margin: auto;
+}*/
+
+footer {
+  text-align: center;
+}
+
+footer a {
+  padding-right: 25px;
+}
