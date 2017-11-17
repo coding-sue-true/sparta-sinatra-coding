@@ -1,0 +1,7 @@
+<h1>Languages</h1>
+<% @coding.each do |coder| %>
+  <div>
+    <h3><a href="/coding/<%= coder[:id]%>"><%= coder[:title] %></a></h3>
+    <p><%= coder[:body] %></p>
+  </div>
+<% end %>

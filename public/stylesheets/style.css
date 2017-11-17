@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+body {
+  background-color: #eee;
+  font-family: Playfair Display;
+}
+
+nav {
+  margin: 25px;
+}
+
+nav a {
+  padding-right: 25px;
+}
+
+footer {
+  text-align: center;
+}
+
+footer a {
+  padding-right: 25px;
+}
