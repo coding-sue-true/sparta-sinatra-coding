@@ -1,4 +1,10 @@
-<h1><%= @coder[:title] %></h1>
-<p>
-<%= @coder[:body] %>
-</p>
+<h1><%= @language.title %></h1>
+
+<p><%= @language.body %></p>
+
+<a href="/<%= @language.id %>/edit">Edit</a>
+
+<form action="<%= @language.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" name="name" value="Delete">
+</form>

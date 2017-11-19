@@ -1,0 +1,16 @@
+<form action="/<%= @language.id %>" method="POST">
+  <div>
+    <label>Title</label>
+    <input type="text" name="title" placeholder="Enter a title" value="<%= @language.title %>">
+  </div>
+  <div>
+    <label>Body</label>
+    <textarea name="body" rows="8" cols="40" placeholder="The body of the post"><%= @language.body %></textarea>
+  </div>
+  <div>
+    <input type="submit" value="Save Post">
+  </div>
+  <% if(@language.id) %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+</form>
