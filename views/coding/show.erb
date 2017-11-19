@@ -1,10 +1,15 @@
-<h1><%= @language.title %></h1>
-
-<p><%= @language.body %></p>
-
-<a href="/<%= @language.id %>/edit">Edit</a>
-
-<form action="<%= @language.id %>" method="POST">
-  <input type="hidden" name="_method" value="DELETE">
-  <input type="submit" name="name" value="Delete">
-</form>
+<div class="show">
+  <h1><%= @language.title %></h1>
+  <p><%= @language.body %></p>
+  <div class="options">
+    <div class="edit_option">
+      <a href="/<%= @language.id %>/edit" class="button">Edit</a>
+    </div>
+    <div class="delete_option"
+      <form action="<%= @language.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE" class="button">
+        <input type="submit" name="name" value="Delete" class="button">
+      </form>
+    </div>
+  </div>
+</div>

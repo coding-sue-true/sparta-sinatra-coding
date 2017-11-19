@@ -12,6 +12,64 @@ nav a {
   padding-right: 25px;
 }
 
+.index {
+  margin: auto;
+  text-align: center;
+  width: 500px;
+  text-align: justify;
+}
+
+.index h1, h3 {
+  text-align: center;
+}
+
+.new {
+  margin: auto;
+  text-align: center;
+  width: 500px;
+  text-align: justify;
+}
+
+.show {
+  margin: auto;
+  text-align: center;
+  width: 500px;
+  text-align: justify;
+  height: 500px;
+}
+
+.show h1 {
+  text-align: center;
+}
+
+.button {
+    background-color: #555555;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.edit_option {
+  float: left;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.delete_option {
+  float: left;
+  text-align: center;
+}
+
+.options {
+  text-align: center;
+  margin-left: 35%;
+}
+
 footer {
   text-align: center;
 }

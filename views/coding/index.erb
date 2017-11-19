@@ -1,7 +1,9 @@
-<h1>Languages</h1>
-<% @languages.each do |language| %>
+<div class="index">
+  <h1>Languages</h1>
+  <% @languages.each do |language| %>
   <div>
     <h3><a href="/<%= language.id%>"><%= language.title %></a></h3>
     <p><%= language.body %></p>
   </div>
-<% end %>
+  <% end %>
+</div>
