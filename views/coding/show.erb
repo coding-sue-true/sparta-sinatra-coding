@@ -5,9 +5,9 @@
     <div class="edit_option">
       <a href="/<%= @language.id %>/edit" class="button">Edit</a>
     </div>
-    <div class="delete_option"
+    <div class="delete_option">
       <form action="<%= @language.id %>" method="POST">
-        <input type="hidden" name="_method" value="DELETE" class="button">
+        <input type="hidden" name="_method" value="DELETE">
         <input type="submit" name="name" value="Delete" class="button">
       </form>
     </div>

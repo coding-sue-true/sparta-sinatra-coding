@@ -58,7 +58,7 @@ class CodingController < Sinatra::Base
 
   put "/:id" do
     id = params[:id].to_i
-    
+
     language = Language.find(id)
 
     language.id = params[:id]
@@ -74,7 +74,7 @@ class CodingController < Sinatra::Base
     id = params[:id].to_i
 
     Language.destroy(id)
-
+    puts 'deleted'
     redirect "/"
   end
 end
