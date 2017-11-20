@@ -12,8 +12,100 @@ nav a {
   padding-right: 25px;
 }
 
+.index {
+  margin: auto;
+  text-align: center;
+  width: 500px;
+  text-align: justify;
+}
+
+.index h1, h3 {
+  text-align: center;
+}
+
+.new {
+  margin: auto;
+  text-align: center;
+  width: 500px;
+  height: 500px;
+}
+
+.edit {
+  margin: auto;
+  text-align: center;
+  width: 500px;
+  height: 500px;
+}
+
+.show {
+  margin: auto;
+  text-align: center;
+  width: 500px;
+  text-align: justify;
+  height: 500px;
+}
+
+.show h1 {
+  text-align: center;
+}
+
+.button {
+    background-color: #555555;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.edit_option {
+  float: left;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.delete_option {
+  float: left;
+  text-align: center;
+}
+
+.options {
+  text-align: center;
+  margin-left: 35%;
+}
+
+form {
+  text-align: center;
+}
+
+a {
+  /*text-decoration: none;*/
+}
+
+a:link, a:visited {
+  /*color: #5b5d51;*/
+}
+
+#form_title, #form_body {
+  border-radius: 12px;
+  border: #312d2da1 1px solid;
+  padding: 5px;
+  width: 250px;
+  text-align: center;
+  font-size: 16px;
+  font-family: playfair-display;
+}
+
+hr {
+  width: 800px;
+}
+
 footer {
   text-align: center;
+  margin: 25px;
 }
 
 footer a {

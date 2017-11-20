@@ -8,69 +8,73 @@ class CodingController < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  $code = [{
-  	id: 0,
-  	title: "HTML",
-  	body: "<p>HTML is the standard markup language for creating Web pages and it stands for Hyper Text Markup Language</p>
-    <p>HTML describes the structure of Web pages using markup. The different elements are the building blocks of HTML pages and they are represented by tags</p>"
-  },
-  {
-    id: 1,
-    title: "CSS",
-    body: "<p>CSS stands for Cascading Style Sheets and  it describes how HTML elements are to be displayed on screen, paper, or in other media</p>
-    <p>It can control the layout of multiple web pages all at once</p>"
-  },
-  {
-    id: 2,
-    title: "JavaScript",
-    body: "<p>JavaScript is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language.</p>
-    <p>Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. </p>
-    <p>It is used to make webpages interactive and provide online programs, including video games.</p>"
-  }];
-
   get "/" do
     @title = "Coding_True"
-    @coding = $code
-    erb :'coding/home'
-  end
 
-  get "/coding" do
-    @title = "Coding_True"
-    @coding = $code
+    @languages = Language.all
+
     erb :'coding/index'
   end
 
-  get "/coding/new" do
+  get "/new" do
     @title = "Coding_True"
+
+    @language = Language.new
+
     erb :'coding/new'
   end
 
-  get "/coding/edit" do
+  get "/:id/edit" do
     @title = "Coding_True"
+
+    id = params[:id].to_i
+
+    @language = Language.find(id)
+
     erb :'coding/edit'
   end
-  
-  get "/coding/:id" do
-    id = params[:id].to_i
-    @coder = $code[id]
+
+  get "/:id" do
     @title = "Coding_True"
+
+    id = params[:id].to_i
+
+    @language = Language.find(id)
+
     erb :'coding/show'
   end
 
 
-  post "/coding/" do
-    "New programming language"
+  post "/" do
+
+    language = Language.new
+    language.title = params[:title]
+    language.body = params[:body]
+
+    language.save
+
+    redirect "/"
   end
 
-  put "/coding/:id" do
-    id = params[:id]
+  put "/:id" do
+    id = params[:id].to_i
 
-    "Update: #{id}"
+    language = Language.find(id)
+
+    language.id = params[:id]
+    language.title = params[:title]
+    language.body = params[:body]
+
+    language.save
+
+    redirect "/"
   end
 
-  delete "/coding/:id" do
-    id = params[:id]
+  delete "/:id" do
+    id = params[:id].to_i
 
-    "Delete: #{id}"
+    Language.destroy(id)
+    puts 'deleted'
+    redirect "/"
   end
 end
