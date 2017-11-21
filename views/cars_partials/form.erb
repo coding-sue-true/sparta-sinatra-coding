@@ -1,4 +1,4 @@
-<form action="/<%= @car.id %>" method="POST">
+<form action="/cars/<%= @car.id %>" method="POST">
   <div>
     <label>Title</label>
     <input type="text" name="title" placeholder="Enter a title" value="<%= @car.title %>" id="form_title">
@@ -8,9 +8,9 @@
     <textarea name="body" rows="8" cols="40" placeholder="The body of the post" id="form_body"><%= @car.body %></textarea>
   </div>
   <div>
-    <label>Image</label>
-    <textarea name="image" rows="8" cols="40" placeholder="The body of the post" id="form_body"><%= @car.image %></textarea>
-  </div>
+      <label>Image URL</label>
+      <input type="text" name="image" placeholder="Enter the URL for the image" value="<%= @car.image %>" id="form_body">
+    </div>
   <div>
     <input type="submit" value="Save Post" class="button">
   </div>

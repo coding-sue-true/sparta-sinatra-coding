@@ -9,7 +9,7 @@ class Car
     if(self.id)
       sql = "UPDATE cars SET title='#{self.title}', body='#{self.body}', image='#{self.image}' WHERE id = #{self.id}"
     else
-      sql = "INSERT INTO cars (title, body, image) VALUES ('#{self.title}', '#{self.body}', image='#{self.image}')"
+      sql = "INSERT INTO cars (title, body, image) VALUES ('#{self.title}', '#{self.body}', '#{self.image}')"
     end
 
     conn.exec(sql)
