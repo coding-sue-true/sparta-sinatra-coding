@@ -13,9 +13,9 @@ use Rack::MethodOverride
 
 run Rack::Cascade.new ([
   CodingController,
-  CarsController,
-  ApiCarsController
+  CarsController
+  # ApiCarsController
 ])
 # run CodingController
-
+# run ApiCarsController
 # run CarsController
