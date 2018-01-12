@@ -1,0 +1,10 @@
+<div class="index">
+  <h1>Cars</h1>
+  <% @cars.each do |car| %>
+  <div>
+    <h3><a href="/cars/<%= car.id%>"><%= car.title %></a></h3>
+    <p><%= car.body %></p>
+    <img src="<%= car.image %>" alt="">
+  </div>
+  <% end %>
+</div>

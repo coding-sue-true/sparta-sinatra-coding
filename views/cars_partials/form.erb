@@ -1,0 +1,20 @@
+<form action="/cars/<%= @car.id %>" method="POST">
+  <div>
+    <label>Title</label>
+    <input type="text" name="title" placeholder="Enter a title" value="<%= @car.title %>" id="form_title">
+  </div>
+  <div>
+    <label>Body</label>
+    <textarea name="body" rows="8" cols="40" placeholder="The body of the post" id="form_body"><%= @car.body %></textarea>
+  </div>
+  <div>
+      <label>Image URL</label>
+      <input type="text" name="image" placeholder="Enter the URL for the image" value="<%= @car.image %>" id="form_body">
+    </div>
+  <div>
+    <input type="submit" value="Save Post" class="button">
+  </div>
+  <% if(@car.id) %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+</form>

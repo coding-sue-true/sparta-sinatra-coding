@@ -1,0 +1,16 @@
+<div class="show">
+  <h1><%= @car.title %></h1>
+  <p><%= @car.body %></p>
+  <img src="<%= @car.image %>" alt="">
+  <div class="options">
+    <div class="edit_option">
+      <a href="/cars/<%= @car.id %>/edit" class="button">Edit</a>
+    </div>
+    <div class="delete_option">
+      <form action="<%= @car.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" name="name" value="Delete" class="button">
+      </form>
+    </div>
+  </div>
+</div>
